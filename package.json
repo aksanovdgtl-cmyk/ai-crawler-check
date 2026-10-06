@@ -1,0 +1,52 @@
+{
+  "name": "ai-crawler-check",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Check which AI crawlers (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended) your robots.txt allows. Web UI + Cloudflare Worker API. By HITZ, GEO agency.",
+  "author": {
+    "name": "HITZ",
+    "url": "https://hitz.agency"
+  },
+  "contributors": [
+    {
+      "name": "Marat Aksanov",
+      "url": "https://aksanov.digital"
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://hitz.agency/tools/ai-crawler-check",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aksanovdgtl-cmyk/ai-crawler-check.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aksanovdgtl-cmyk/ai-crawler-check/issues"
+  },
+  "keywords": [
+    "robots-txt",
+    "ai-crawlers",
+    "gptbot",
+    "claudebot",
+    "perplexity",
+    "generative-engine-optimization",
+    "geo",
+    "seo-tools",
+    "cloudflare-workers",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "tsc --noEmit",
+    "test": "node --test \"test/*.test.*\""
+  },
+  "devDependencies": {
+    "miniflare": "4.20260730.0",
+    "typescript": "6.0.3",
+    "wrangler": "4.147.0"
+  }
+}

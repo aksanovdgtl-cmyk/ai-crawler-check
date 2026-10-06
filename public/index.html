@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Проверка доступа AI-краулеров к сайту онлайн - HITZ</title>
+<meta name="description" content="Узнайте, каким AI-ботам открыт сайт: GPTBot, ClaudeBot, PerplexityBot, YandexBot и другие. Разбор robots.txt по девяти краулерам за несколько секунд.">
+<!-- Оригинал: https://hitz.agency/tools/ai-crawler-check. Каноническая ссылка ведет на онлайн-версию HITZ. -->
+<link rel="canonical" href="https://hitz.agency/tools/ai-crawler-check">
+<link rel="alternate" hreflang="ru" href="https://hitz.agency/tools/ai-crawler-check">
+<link rel="alternate" hreflang="en" href="https://hitz.agency/en/tools/ai-crawler-check">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/tool.css">
+</head>
+<body>
+<header class="oss-bar">
+  <div class="oss-bar__in">
+    <a class="oss-bar__logo" href="https://hitz.agency/" aria-label="HITZ, на главную"><img src="assets/hitz-logo.svg" alt="HITZ" width="92" height="30"></a>
+    <a href="en/" hreflang="en">English</a>
+    <a href="https://github.com/aksanovdgtl-cmyk/ai-crawler-check">Исходный код</a>
+    <a class="oss-bar__live" href="https://hitz.agency/tools/ai-crawler-check">Онлайн-версия ↗</a>
+  </div>
+</header>
+<main>
+<div class="t123">
+<div class="aic-page"><section class="aic-ac-hero aic-section-shell"> <div class="aic-ac-hero-copy"> <div class="aic-eyebrow">БЕСПЛАТНЫЙ ИНСТРУМЕНТ · GEO</div> <h1>Проверка доступа AI-краулеров</h1> <p class="aic-hero-subhead">Узнайте, какие AI-системы могут читать ваш сайт по правилам robots.txt.</p> </div> <div class="aic-ac-check-card" id="checker"> <div class="aic-ac-card-head"><div><span class="aic-panel-kicker">ROBOTS.TXT</span><h2>Введите домен</h2></div><div class="aic-live-dot"><span></span> 9 краулеров</div></div> <form id="crawler-form"> <label for="site-url">Адрес сайта</label> <div class="aic-input-row"><input id="site-url" type="url" value="https://hitz.agency" placeholder="https://example.com" required><button class="aic-primary-button" type="submit">Проверить <span aria-hidden="true">↗</span></button></div> <p class="aic-form-note">Загрузим robots.txt и найдем отдельные или общие правила для AI-ботов.</p> </form> <div class="aic-ac-mini-list" aria-hidden="true"> <div><span>OAI-SearchBot</span><b class="aic-ac-ok">разрешен</b></div> <div><span>Claude-SearchBot</span><b class="aic-ac-ok">разрешен</b></div> <div><span>PerplexityBot</span><b class="aic-ac-warn">проверим</b></div> <div><span>GPTBot</span><b>отдельно</b></div> </div> </div> </section><section class="aic-ac-result aic-section-shell" id="result" hidden aria-live="polite"> <div class="aic-ac-result-head"> <div><div class="aic-eyebrow">РЕЗУЛЬТАТ ПРОВЕРКИ</div><h2 id="result-domain">Доступ AI-краулеров</h2><a id="robots-link" href="#" target="_blank" rel="noopener">Открыть robots.txt ↗</a></div> <div class="aic-ac-score"><strong id="allowed-count">-</strong><span>из 9 разрешены</span></div> </div> <div class="aic-ac-summary" id="summary"><span class="aic-ac-summary-status">Проверяем</span><p>Загружаем правила сайта.</p></div> <div class="aic-ac-groups" id="crawler-groups"></div> <div class="aic-ac-recommendation"> <div><span class="aic-eyebrow">ГОТОВОЕ ПРАВИЛО</span><h3>Разрешить краулеры AI-поиска</h3><p>Обучающие боты не включены: доступ к ним настраивается отдельно.</p></div> <div class="aic-ac-code"><div><span>robots.txt</span><button id="copy-rule" type="button">Копировать</button></div><pre id="rule-code">User-agent: OAI-SearchBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /</pre></div> </div> </section></div>
+</div>
+<div class="t123">
+<div class="aic-page"><section class="aic-what-section aic-section-shell"> <div class="aic-section-heading-row aic-align-end"><h2>Что проверяет инструмент</h2><p>Доступ к сайту оценивается по фактическим группам и директивам robots.txt.</p></div> <div class="aic-feature-grid"> <article class="aic-feature-card"><span class="aic-feature-number">01</span><div class="aic-feature-icon">/</div><h3>Наличие файла</h3><p>Доступность robots.txt, код ответа и корректный адрес в корне домена.</p></article> <article class="aic-feature-card"><span class="aic-feature-number">02</span><div class="aic-feature-icon">*</div><h3>Общие правила</h3><p>Ограничения из группы User-agent: *, если отдельного правила для бота нет.</p></article> <article class="aic-feature-card"><span class="aic-feature-number">03</span><div class="aic-feature-icon">AI</div><h3>Отдельные боты</h3><p>Правила OpenAI, Anthropic, Perplexity и управляющий токен Google-Extended.</p></article> <article class="aic-feature-card"><span class="aic-feature-number">04</span><div class="aic-feature-icon">≠</div><h3>Тип доступа</h3><p>AI-поиск, запрос пользователя и обучение моделей показаны раздельно.</p></article> </div> </section><section class="aic-ac-method"> <div class="aic-section-shell aic-ac-method-inner"> <div><div class="aic-eyebrow aic-dark">КАК ЧИТАТЬ РЕЗУЛЬТАТ</div><h2>Разрешение зависит от задачи</h2></div> <div class="aic-ac-method-grid"> <article><span>01</span><h3>AI-поиск</h3><p>Разрешайте поисковые краулеры, если хотите попадать в ответы со ссылками.</p></article> <article><span>02</span><h3>Запрос пользователя</h3><p>Эти агенты открывают страницу, когда человек прямо просит AI ее прочитать.</p></article> <article><span>03</span><h3>Обучение</h3><p>Доступ обучающих ботов можно ограничить независимо от AI-поиска.</p></article> </div> </div> </section></div>
+</div>
+<div class="t123">
+<div class="aic-page"><section class="aic-faq-section aic-section-shell" id="faq"> <div class="aic-eyebrow">ВОПРОСЫ ОБ ИНСТРУМЕНТЕ</div><h2>FAQ</h2> <div class="aic-faq-list"> <details><summary>Отсутствие robots.txt блокирует AI-ботов?<span>+</span></summary><p>Нет. Если файл отсутствует, доступ обычно считается разрешенным по умолчанию, хотя серверная защита может блокировать ботов отдельно.</p></details> <details><summary>Можно разрешить AI-поиск и запретить обучение?<span>+</span></summary><p>Да. Для этого используются разные user-agent: например OAI-SearchBot для поиска и GPTBot для потенциального обучения.</p></details> <details><summary>Проверка учитывает Cloudflare и WAF?<span>+</span></summary><p>Нет. Инструмент читает robots.txt. Фактический доступ также зависит от CDN, firewall, антибот-защиты и проверки IP.</p></details> <details><summary>Что значит частичный доступ?<span>+</span></summary><p>Корень сайта доступен, но отдельные папки или типы страниц закрыты директивой Disallow.</p></details> </div> </section> <section class="aic-links-section aic-section-shell"> <p class="aic-links-eyebrow">Материалы и следующие шаги</p> <div class="aic-links-grid"> <article class="aic-link-card"><small>СТАТЬЯ</small><h2>Как AI-боты читают robots.txt</h2><div class="aic-link-list"><a href="https://hitz.agency/blog/ai-kraulery-robots-txt">AI-краулеры и robots.txt ↗</a></div></article> <article class="aic-link-card"><small>СЛЕДУЮЩИЙ ШАГ</small><h2>Продолжить проверку</h2><div class="aic-link-list"><a href="https://hitz.agency/tools/llms-txt">Проверить llms.txt ↗</a><a href="https://hitz.agency/tools/geo-audit">Провести GEO-аудит страницы ↗</a></div></article> </div> <div class="aic-service"><p>Если нужен разбор не только robots.txt, можно <a href="https://hitz.agency/audit">разобрать сайт целиком</a>.</p><a href="https://hitz.agency/geo">GEO-продвижение ↗</a></div> <a class="aic-all-tools" href="https://hitz.agency/tools">Все инструменты ↗</a> </section> <div class="aic-toast" id="toast" role="status">Скопировано</div>
+<script src="assets/js/faq.js"></script>
+</div>
+</div>
+</main>
+<footer class="oss-foot">
+  <div class="oss-foot__in">
+    <span class="oss-foot__copy">© 2026 HITZ, GEO-агентство. «Проверка доступа AI-краулеров», открытая версия под лицензией MIT.</span>
+    <a href="https://hitz.agency/tools">Все инструменты HITZ</a>
+    <a href="https://github.com/aksanovdgtl-cmyk/ai-crawler-check">GitHub</a>
+  </div>
+</footer>
+</body>
+</html>

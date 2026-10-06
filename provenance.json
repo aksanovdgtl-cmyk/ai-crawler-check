@@ -1,0 +1,57 @@
+{
+  "publisher": "HITZ",
+  "publisher_url": "https://hitz.agency",
+  "captured_on": "2026-10-06",
+  "original_urls": {
+    "ru": "https://hitz.agency/tools/ai-crawler-check",
+    "en": "https://hitz.agency/en/tools/ai-crawler-check"
+  },
+  "catalog_url": "https://hitz.agency/tools",
+  "sources": {
+    "page_ru": [
+      {
+        "file": "src/components/tools/ai-crawler-check/Tool.astro",
+        "sha256": "a7bd2ff3a72b4bb95596ea2605749047b631898ccd2165f053dcefe32f4b383d"
+      },
+      {
+        "file": "src/components/tools/ai-crawler-check/About.astro",
+        "sha256": "bc541e3be8ddc19ebf6c8202465a186671b66fa6bf5dad595ccb418d874cdbed"
+      },
+      {
+        "file": "src/components/tools/ai-crawler-check/Faq.astro",
+        "sha256": "85090cd4e28cc6c11914dfddeb1293c0adb0f93fd48d2d97d475e8af36ccb78e"
+      }
+    ],
+    "page_en": [
+      {
+        "file": "src/components/tools/ai-crawler-check/ToolEn.astro",
+        "sha256": "4b39cbdbaefe7d9930725199647a7b17db82a5a2059094a73b43862dbd7fe03c"
+      }
+    ],
+    "server": [
+      {
+        "file": "src/server/tools/net.ts",
+        "sha256": "807c5e6f27183914275c7f23359b36d7ead488258ec53f7023ac3567b29e3e7f",
+        "copied_to": "src/core/net.ts"
+      },
+      {
+        "file": "src/server/tools/robots.ts",
+        "sha256": "d25505025a75925bea184125830a5e28343bb26e9de24ca1400f750ef5ebcfc7",
+        "copied_to": "src/core/robots.ts"
+      },
+      {
+        "file": "src/server/tools/messages.ts",
+        "sha256": "e5a301ca5f92f5c3561b723733e90acf495e37b673a0bb8ebf9b3f8c3aef4ee7",
+        "copied_to": "src/core/messages.ts"
+      }
+    ]
+  },
+  "modifications": [
+    "Extracted the tool sections of the RU and EN pages; site header, footer, lead form, analytics and JSON-LD excluded",
+    "Moved inline styles to public/assets/tool.css and inline scripts to public/assets/js without code changes",
+    "Converted site-relative links to absolute https://hitz.agency URLs",
+    "Added a minimal header and footer with links to the online version and the source code",
+    "Server checks copied from the hitz.agency tools API without logic changes; import paths use .ts extensions; Origin allowlist reduced to same-origin",
+    "Added README, citation, license, tests and Cloudflare Workers configuration"
+  ]
+}

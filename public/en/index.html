@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Crawler Check: Who Can Read Your Site in robots.txt</title>
+<meta name="description" content="Check which AI crawlers your robots.txt allows, across 9 bots and three access types: AI search, user-initiated fetch, and model training. Free.">
+<!-- Оригинал: https://hitz.agency/en/tools/ai-crawler-check. Каноническая ссылка ведет на онлайн-версию HITZ. -->
+<link rel="canonical" href="https://hitz.agency/en/tools/ai-crawler-check">
+<link rel="alternate" hreflang="ru" href="https://hitz.agency/tools/ai-crawler-check">
+<link rel="alternate" hreflang="en" href="https://hitz.agency/en/tools/ai-crawler-check">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/tool.css">
+</head>
+<body>
+<header class="oss-bar">
+  <div class="oss-bar__in">
+    <a class="oss-bar__logo" href="https://hitz.agency/en" aria-label="HITZ home"><img src="../assets/hitz-logo.svg" alt="HITZ" width="92" height="30"></a>
+    <a href="../" hreflang="ru">Русский</a>
+    <a href="https://github.com/aksanovdgtl-cmyk/ai-crawler-check">Source code</a>
+    <a class="oss-bar__live" href="https://hitz.agency/en/tools/ai-crawler-check">Live version ↗</a>
+  </div>
+</header>
+<main>
+<div class="t123">
+<div data-lang="en" class="aic-page"><section class="aic-ac-hero aic-section-shell"> <div class="aic-ac-hero-copy"> <div class="aic-eyebrow">FREE TOOL · GEO</div> <h1>AI crawler access check</h1> <p class="aic-hero-subhead">See which AI systems can read your site under the rules in robots.txt.</p> </div> <div class="aic-ac-check-card" id="checker"> <div class="aic-ac-card-head"><div><span class="aic-panel-kicker">ROBOTS.TXT</span><h2>Enter a domain</h2></div><div class="aic-live-dot"><span></span> 9 crawlers</div></div> <form id="crawler-form"> <label for="site-url">Site URL</label> <div class="aic-input-row"><input id="site-url" placeholder="https://example.com" required="" type="url" value="https://hitz.agency"/><button class="aic-primary-button" type="submit">Check <span aria-hidden="true">↗</span></button></div> <p class="aic-form-note">We load robots.txt and look for rules that apply to AI bots, whether they are set for each bot or inherited from a shared group.</p> </form> <div aria-hidden="true" class="aic-ac-mini-list"> <div><span>OAI-SearchBot</span><b class="aic-ac-ok">allowed</b></div> <div><span>Claude-SearchBot</span><b class="aic-ac-ok">allowed</b></div> <div><span>PerplexityBot</span><b class="aic-ac-warn">checking</b></div> <div><span>GPTBot</span><b>separate rule</b></div> </div> </div> </section><section aria-live="polite" class="aic-ac-result aic-section-shell" hidden="" id="result"> <div class="aic-ac-result-head"> <div><div class="aic-eyebrow">CHECK RESULT</div><h2 id="result-domain">AI crawler access</h2><a href="#" id="robots-link" rel="noopener" target="_blank">Open robots.txt ↗</a></div> <div class="aic-ac-score"><strong id="allowed-count">-</strong><span>of 9 allowed</span></div> </div> <div class="aic-ac-summary" id="summary"><span class="aic-ac-summary-status">Checking</span><p>Loading the site's rules.</p></div> <div class="aic-ac-groups" id="crawler-groups"></div> <div class="aic-ac-recommendation"> <div><span class="aic-eyebrow">READY RULE</span><h3>Allow AI search crawlers</h3><p>Training bots are not included. Configure their access separately.</p></div> <div class="aic-ac-code"><div><span>robots.txt</span><button id="copy-rule" type="button">Copy</button></div><pre id="rule-code">User-agent: OAI-SearchBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /</pre></div> </div> </section></div> <div class="aic-page"><section class="aic-what-section aic-section-shell"> <div class="aic-section-heading-row aic-align-end"><h2>What the tool checks</h2><p>Access is read from the actual groups and directives in robots.txt.</p></div> <div class="aic-feature-grid"> <article class="aic-feature-card"><span class="aic-feature-number">01</span><div class="aic-feature-icon">/</div><h3>File presence</h3><p>Whether robots.txt exists in the root, what status code it returns, and whether the address is correct.</p></article> <article class="aic-feature-card"><span class="aic-feature-number">02</span><div class="aic-feature-icon">*</div><h3>Shared rules</h3><p>Restrictions inherited from User-agent: * when a bot has no rule of its own.</p></article> <article class="aic-feature-card"><span class="aic-feature-number">03</span><div class="aic-feature-icon">AI</div><h3>Named bots</h3><p>Rules for OpenAI, Anthropic, and Perplexity crawlers, plus the Google-Extended control token.</p></article> <article class="aic-feature-card"><span class="aic-feature-number">04</span><div class="aic-feature-icon">≠</div><h3>Access type</h3><p>AI search, user-initiated fetch, and model training are reported separately.</p></article> </div> </section><section class="aic-ac-method"> <div class="aic-section-shell aic-ac-method-inner"> <div><div class="aic-eyebrow aic-dark">READING THE RESULT</div><h2>What to allow depends on what you want</h2></div> <div class="aic-ac-method-grid"> <article><span>01</span><h3>AI search</h3><p>Allow search crawlers if you want to appear in answers with a link back.</p></article> <article><span>02</span><h3>User-initiated fetch</h3><p>These agents open a page when a person explicitly asks an AI system to read it.</p></article> <article><span>03</span><h3>Training</h3><p>Training bots can be restricted without affecting AI search.</p></article> </div> </div> </section></div> <div class="aic-page"><section class="aic-faq-section aic-section-shell" id="faq"> <div class="aic-eyebrow">QUESTIONS ABOUT THE TOOL</div><h2>FAQ</h2> <div class="aic-faq-list"> <details><summary>If there is no robots.txt, are AI bots blocked<span>+</span></summary><p>No. A missing file means no restrictions. Bots read the site under their own rules.</p></details> <details><summary>Can I allow AI search and block training<span>+</span></summary><p>Yes. They use different user agents, so the rules are set separately.</p></details> <details><summary>Does the check account for Cloudflare and WAF<span>+</span></summary><p>No. The tool reads robots.txt. A firewall or bot-protection layer can block a crawler that robots.txt allows, and that shows up in server logs, not in this file.</p></details> <details><summary>What does partial access mean<span>+</span></summary><p>Some of a vendor's bots are allowed and others are blocked. A common case is AI search open and training closed.</p></details> </div> </section> <section class="aic-links-section aic-section-shell"> <p class="aic-links-eyebrow">Materials and next steps</p> <div class="aic-links-grid"> <article class="aic-link-card"><small>ARTICLE</small><h2>How AI bots read robots.txt</h2><div class="aic-link-list"><a href="https://hitz.agency/en">AI crawlers and robots.txt ↗</a></div></article> <article class="aic-link-card"><small>NEXT STEP</small><h2>Keep checking</h2><div class="aic-link-list"><a href="https://hitz.agency/en/tools/llms-txt">Check llms.txt ↗</a><a href="https://hitz.agency/en/tools/geo-audit">Run a GEO page audit ↗</a></div></article> </div> <div class="aic-service"><p>If access is open but your pages still do not show up in AI answers, look at GEO services.</p><a href="https://hitz.agency/en">GEO services ↗</a></div> <a class="aic-all-tools" href="https://hitz.agency/en/tools">All tools ↗</a> </section> <div class="aic-toast" id="toast" role="status">Copied</div>
+<script src="../assets/js/en/tool-en.js"></script>
+</div>
+</div>
+</main>
+<footer class="oss-foot">
+  <div class="oss-foot__in">
+    <span class="oss-foot__copy">© 2026 HITZ, GEO agency. AI Crawler Access Checker, open-source version under the MIT license.</span>
+    <a href="https://hitz.agency/en/tools">All HITZ tools</a>
+    <a href="https://github.com/aksanovdgtl-cmyk/ai-crawler-check">GitHub</a>
+  </div>
+</footer>
+</body>
+</html>
